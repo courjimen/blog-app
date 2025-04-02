@@ -1,23 +1,12 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import NavBar from './NavBar'
 
 function Home() {
   return (
     <div className='home-page'>
-        <nav className='nav-bar'>
-            <ul>
-                <li>
-                    <Link to="/login">Login</Link>
-                </li>
-                <li>
-                    <Link to="/Subscribe">Subscribe</Link>
-                </li>
-                <li>
-                    <Link to="/Favorites">Favorites</Link>
-                </li>
-            </ul>
-        </nav>
-        
+      <h1 className='home-header'>Welcome to my Blog</h1>
+      <NavBar />
+
     </div>
   )
 }

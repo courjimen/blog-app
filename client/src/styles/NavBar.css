@@ -1,0 +1,33 @@
+.navbar {
+    background-color: bisque;
+    padding: auto;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.nav-item {
+    flex: 1;
+    text-align: center;
+    border-right: 2px solid rgb(255, 255, 255)
+}
+
+.nav-item :last-child {
+    border-right: none;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: salmon;
+    font-weight: bold;
+    display: block;
+    padding: 10px 0;
+  }
+  
+  .nav-links li a:hover {
+    color: #fbfbfb;
+  }
