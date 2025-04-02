@@ -105,11 +105,11 @@ function Login() {
 
           {/* Username */}
           <div>
-            <label htmlFor='phone'>Username<span className="required-star">*</span></label>
+            <label htmlFor='username'>Username<span className="required-star">*</span></label>
             <input
             type='text'
             id='username'
-            name="usernam"
+            name="username"
             value={createAcct.username}
             onChange={handleCreateAcctChange}
             required
