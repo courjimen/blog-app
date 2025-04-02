@@ -1,0 +1,69 @@
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .login-form,
+  .create-acct {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid salmon;
+    background-color: bisque;
+    border-radius: 5px;
+    margin: 20px;
+  }
+  
+  .login-form h2,
+  .create-acct h2 {
+    text-align: center;
+  }
+  
+  .login-form div,
+  .create-acct div {
+    margin-bottom: 10px;
+  }
+  
+  .login-form label,
+  .create-acct label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .login-form input,
+  .create-acct input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid white;
+    border-radius: 4px;
+  }
+  
+  .login-form button,
+  .create-acct button {
+    width: 100%;
+    padding: 10px;
+    background-color: tan;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .login-form button:hover,
+  .create-acct button:hover {
+    background-color: salmon;
+  }
+  
+  .divider {
+    margin: 0 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: salmon;
+  }
+
+  .required-star {
+    color: red;
+    margin-left: 5px;
+  }
