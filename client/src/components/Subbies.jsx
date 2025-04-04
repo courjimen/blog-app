@@ -6,7 +6,7 @@ function Subbies() {
 
   const [subscribe, setSubscribe] = useState({
     firstName: '',
-    lastName: '',
+    username: '',
     email: '',
     contentPref: ''
   })
@@ -41,14 +41,14 @@ function Subbies() {
           />
         </div>
 
-        {/* Last Name */}
+        {/* username */}
         <div>
-          <label htmlFor='lastName'>Last Name</label>
+          <label htmlFor='username'>Username</label>
           <input
             type='text'
-            id='lastName'
-            name="lastName"
-            value={subscribe.lastName}
+            id='username'
+            name="username"
+            value={subscribe.username}
             onChange={handleSubscribeChange}
           />
         </div>
