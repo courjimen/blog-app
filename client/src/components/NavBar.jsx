@@ -16,7 +16,7 @@ function NavBar() {
           <Link to="/Subscribe">Subscribe</Link>
         </li>
         <li className='nav-item'>
-          <Link to="/Favorites">Favorites</Link>
+          <Link to="/bookmarks/blogs">Favorites</Link>
         </li>
       </ul>
     </nav>

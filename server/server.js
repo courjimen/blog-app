@@ -51,6 +51,41 @@ app.get('/blogs/:id', async(req, res) => {
     }
 })
 
+//add a fave blog
+app.post('/bookmarks', async (req, res) => {
+    const { blogId } = req.body;
+    try {
+        await pool.query('INSERT INTO bookmarks (blog_id) VALUES ($1)', [blogId]);
+        res.sendStatus(201);
+    } catch (err) {
+        console.error('Error adding bookmark:', err);
+        res.sendStatus(500);
+    }
+});
+
+//display fave blogs
+app.get('/bookmarks/blogs', async (req, res) => {
+    try {
+        const result = await pool.query('SELECT blog_id FROM bookmarks');
+        res.json(result.rows.map(row => row.blog_id));
+    } catch (err) {
+        console.error('Error fetching bookmarks:', err);
+        res.sendStatus(500);
+    }
+});
+
+//remove fave blog
+app.delete('/bookmarks/:blogId', async (req, res) => {
+    const { blogId } = req.params;
+    try {
+        await pool.query('DELETE FROM bookmarks WHERE blog_id = $1', [blogId]);
+        res.sendStatus(204); 
+    } catch (err) {
+        console.error('Error removing bookmark:', err);
+        res.sendStatus(500);
+    }
+});
+
 app.listen(port, () => {
     console.log(`Server listening on ${port}`)
 })

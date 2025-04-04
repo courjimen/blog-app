@@ -14,7 +14,7 @@ function App() {
         <Route path="/" element={<Home/>} />
         <Route path="/login" element={<Login/>} />
         <Route path="/subscribe" element={<Subbies/>} />
-        <Route path="/favorites" element={<Faves/>} />
+        <Route path="/bookmarks/blogs" element={<Faves/>} />
         <Route path="/new" element={<AddBlog />} />
         <Route path="/blogs/:id" element={<Blog />} />
      </Routes>

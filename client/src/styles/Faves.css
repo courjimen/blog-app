@@ -1,0 +1,17 @@
+.faves-page {
+    padding: 20px;
+  }
+  
+  .fave-blog {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .fave-blog h3 {
+    margin-top: 0;
+  }
+  
+  .fave-blog p {
+    margin-bottom: 15px;
+  }
