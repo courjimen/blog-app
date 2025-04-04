@@ -4,6 +4,7 @@ import Home from './components/home';
 import Login from './components/Login';
 import Subbies from './components/Subbies';
 import Faves from './components/Faves';
+import AddBlog from './components/AddBlog';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/login" element={<Login/>} />
         <Route path="/subscribe" element={<Subbies/>} />
         <Route path="/favorites" element={<Faves/>} />
+        <Route path="/new" element={<AddBlog />} />
      </Routes>
     </Router>
   )

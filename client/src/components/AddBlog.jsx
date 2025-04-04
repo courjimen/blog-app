@@ -7,7 +7,7 @@ import '../styles/AddBlog.css'
 
 library.add(faLanguage)
 
-function AddBlog() {
+function AddBlog({ newBlog }) {
   const [blog, setBlog] = useState({
     title: '',
     category: '',
@@ -20,16 +20,39 @@ function AddBlog() {
     setBlog({ ...blog, [e.target.name]: e.target.value })
   }
 
-  const handleBlogSubmit = (e) => {
+  const handleBlogSubmit = async (e) => {
     e.preventDefault()
-    alert('Thanks for submitting your blog!')
-    navigate('/')
+    console.log("Submit button clicked!");
 
-    setBlog({
-      title: '',
-      category: '',
-      content: ''
-    })
+    if (!blog.title.trim() || !blog.content.trim()) {
+      alert('Title and Content cannot be empty.');
+      return;
+    }
+    
+    try {
+      const res = await fetch('http://localhost:3000/blogs', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(blog),
+      })
+
+      if (res.ok) {
+        alert('Blog submitted successfully!')
+        setBlog({
+          title: '',
+          category: '',
+          content: ''
+        })
+        navigate('/')
+      } else {
+        alert('Blog submission failed!')
+      }
+    } catch (error) {
+      console.error('Error :', error)
+      alert('Error adding blog: ', err)
+    }
   }
 
   return (
@@ -70,7 +93,7 @@ function AddBlog() {
 
         {/* Blog Content */}
         <div className='blog-form'>
-        <label htmlFor='content'>Insert your blog content:</label>
+          <label htmlFor='content'>Insert your blog content:</label>
           <textarea
             type='text'
             id='content'
@@ -81,10 +104,11 @@ function AddBlog() {
           />
         </div>
       </form>
+
       <div id="google_translate_element">
-      <FontAwesomeIcon icon={faLanguage} className="translate-icon" />
+        <FontAwesomeIcon icon={faLanguage} className="translate-icon" />
       </div>
-      <button type='submit'>Submit Blog</button>
+      <button type='submit' onClick={handleBlogSubmit}>Submit Blog</button>
     </div>
   )
 }
