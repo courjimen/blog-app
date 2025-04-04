@@ -3,10 +3,13 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "client": "vite",
     "server": "nodemon server/server.js",
     "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "jest": {
+    "testEnvironment": "jest-environment-jsdom"
   },
   "repository": {
     "type": "git",
@@ -21,15 +24,19 @@
   "homepage": "https://github.com/courjimen/blog-app#readme",
   "description": "",
   "devDependencies": {
+    "@babel/preset-env": "^7.26.9",
     "@babel/preset-react": "^7.26.3",
     "@testing-library/dom": "^10.4.0",
+    "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.2.0",
     "babel-jest": "^29.7.0",
     "concurrently": "^9.1.2",
     "jest": "^29.7.0",
+    "jest-fixed-jsdom": "^0.0.9",
     "nodemon": "^3.1.9"
   },
   "dependencies": {
-    "jest-environment-jsdom": "^29.7.0"
+    "jest-environment-jsdom": "^29.7.0",
+    "text-encoding": "^0.7.0"
   }
 }

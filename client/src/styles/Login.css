@@ -6,7 +6,7 @@
   }
   
   .login-form,
-  .create-acct {
+  .create-acct, .subbie-form {
     width: 300px;
     padding: 20px;
     border: 1px solid salmon;
@@ -16,24 +16,24 @@
   }
   
   .login-form h2,
-  .create-acct h2 {
+  .create-acct h2, .subbie-form h2 {
     text-align: center;
   }
   
   .login-form div,
-  .create-acct div {
+  .create-acct div, .subbie-form div {
     margin-bottom: 10px;
   }
   
   .login-form label,
-  .create-acct label {
+  .create-acct label, .subbie-form label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
   }
   
   .login-form input,
-  .create-acct input {
+  .create-acct input, .subbie-form input {
     width: 100%;
     padding: 8px;
     border: 1px solid white;
@@ -41,7 +41,7 @@
   }
   
   .login-form button,
-  .create-acct button {
+  .create-acct button, .subbie-form button{
     width: 100%;
     padding: 10px;
     background-color: tan;
@@ -52,7 +52,7 @@
   }
   
   .login-form button:hover,
-  .create-acct button:hover {
+  .create-acct button:hover, .subbie-form button:hover {
     background-color: salmon;
   }
   
