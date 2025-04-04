@@ -40,7 +40,7 @@ function Home() {
             <h3>{blog.title}</h3>
             <h3>Category: {blog.category}</h3>
             <p>{blog.content.substring(0, 100)}...</p>
-            <Link to={`/blog/${blog.blog_id}`}>Read More</Link>
+            <Link to={`/blogs/${blog.blog_id}`}>Read More</Link>
           </div>
         ))}
       </div>

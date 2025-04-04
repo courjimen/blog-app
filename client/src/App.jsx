@@ -16,7 +16,7 @@ function App() {
         <Route path="/subscribe" element={<Subbies/>} />
         <Route path="/favorites" element={<Faves/>} />
         <Route path="/new" element={<AddBlog />} />
-        <Route path="/blog/:id" element={<Blog />} />
+        <Route path="/blogs/:id" element={<Blog />} />
      </Routes>
     </Router>
   )

@@ -21,8 +21,6 @@ app.get('/blogs', async (req, res) => {
 
 //add new blog to list
 app.post('/blogs', async (req, res) => {
-    console.log('Received POST request to /blogs');
-    console.log('Request body:', req.body);
     const {title, category, content} = req.body
 
     try {
@@ -31,6 +29,24 @@ app.post('/blogs', async (req, res) => {
         res.json(result.rows[0])
     } catch (err) {
         console.error('Error adding blog: ', err)
+        res.sendStatus(500)
+    }
+})
+
+//show the individual blog
+app.get('/blogs/:id', async(req, res) => {
+    const { id } = req.params
+
+    try {
+        const result = await pool.query('SELECT * FROM list WHERE blog_id = $1', [id])
+
+        if(result.rows.length > 0) {
+            res.json(result.rows[0])
+        } else {
+            res.status(404).json({message: 'Blog not found'})
+        }
+    } catch (err) {
+        console.error('Error displaying blog:', err)
         res.sendStatus(500)
     }
 })
