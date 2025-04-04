@@ -1,6 +1,11 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLanguage } from '@fortawesome/free-solid-svg-icons';
+import { library } from '@fortawesome/fontawesome-svg-core';
 import '../styles/AddBlog.css'
+
+library.add(faLanguage)
 
 function AddBlog() {
   const [blog, setBlog] = useState({
@@ -29,7 +34,7 @@ function AddBlog() {
 
   return (
     <div className='blog'>
-      <h2>Add a New Blog Here:</h2>
+      <h2>Add a New Blog Here</h2>
       <form onSubmit={handleBlogSubmit}>
 
         {/* Blog Title */}
@@ -76,7 +81,9 @@ function AddBlog() {
           />
         </div>
       </form>
-
+      <div id="google_translate_element">
+      <FontAwesomeIcon icon={faLanguage} className="translate-icon" />
+      </div>
       <button type='submit'>Submit Blog</button>
     </div>
   )
