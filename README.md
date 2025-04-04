@@ -58,7 +58,7 @@ Part two, you'll need to do in your terminal via Postgres
 
 3. **Set Up the Database Locally with Postgres!**
 
-* **Running locally without a database:** If you want to run the app without setting up the database and see test content run the command `npm run client-dev` and skip past step 5. The test data is in `server/mock-data`. 
+* **Running locally without a database:** If you want to run the app without setting up the database and see test content run the command `npm run client-dev` instead of `npm run dev` and skip past step 5. The test data is in `server/mock-data`. 
 
 * **Create a Database:** You'll need to create a PostgreSQL database. Using `psql` to create your tables locally. Sign in (make sure postgres is installed!) with the following command:
 
