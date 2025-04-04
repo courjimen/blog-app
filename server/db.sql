@@ -26,7 +26,7 @@ CREATE TABLE bookmarks (
     user_id INTEGER REFERENCES subbies(user_id) 
         ON DELETE CASCADE,
     blog_id INTEGER REFERENCES list(blog_id)
-        ON UPDATE CASCADE,
+        ON UPDATE CASCADE
         ON DELETE CASCADE, 
     UNIQUE(user_id, blog_id)
 );
