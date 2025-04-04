@@ -78,10 +78,10 @@ function Subbies() {
           >
 
           <option value="">Select Preference</option>
-          <option value="inspirational">Inspirational</option>
-          <option value="affirmation">Affirmation</option>
-          <option value="encouragement">Encouragement</option>
-          <option value="peaceAndProtection">Peace and Protection</option>
+          <option value="Inspirational">Inspirational</option>
+          <option value="Affirmation">Affirmation</option>
+          <option value="Encouragement">Encouragement</option>
+          <option value="Peace and Protection">Peace and Protection</option>
           </select>
         </div>
 
