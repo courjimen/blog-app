@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import '../styles/Login.css'
+import AiTranslate from './AiTranslate'
 
 function Subbies() {
 
@@ -84,7 +85,7 @@ function Subbies() {
           </select>
         </div>
 
-
+        <AiTranslate />
         <button type='submit'>Subscribe</button>
       </form>
     </div>

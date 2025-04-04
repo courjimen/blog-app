@@ -1,11 +1,7 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLanguage } from '@fortawesome/free-solid-svg-icons';
-import { library } from '@fortawesome/fontawesome-svg-core';
 import '../styles/AddBlog.css'
-
-library.add(faLanguage)
+import AiTranslate from './AiTranslate'
 
 function AddBlog({ newBlog }) {
   const [blog, setBlog] = useState({
@@ -104,10 +100,7 @@ function AddBlog({ newBlog }) {
           />
         </div>
       </form>
-
-      <div id="google_translate_element">
-        <FontAwesomeIcon icon={faLanguage} className="translate-icon" />
-      </div>
+      <AiTranslate />
       <button type='submit' onClick={handleBlogSubmit}>Submit Blog</button>
     </div>
   )

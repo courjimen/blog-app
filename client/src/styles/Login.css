@@ -41,7 +41,7 @@
   }
   
   .login-form button,
-  .create-acct button, .subbie-form button, .blog button{
+  .create-acct button, .subbie-form button, .blog button, .go-back{
     width: 100%;
     padding: 10px;
     background-color: tan;
@@ -51,7 +51,7 @@
     cursor: pointer;
   }
   
-  .login-form button:hover,
+  .login-form button:hover, .go-back:hover,
   .create-acct button:hover, .subbie-form button:hover, .blog button:hover {
     background-color: salmon;
   }

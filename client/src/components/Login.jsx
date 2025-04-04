@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import '../styles/Login.css'
+import AiTranslate from './AiTranslate'
 
 function Login() {
   const [loginData, setLoginData] = useState({
@@ -35,10 +36,15 @@ function Login() {
     setCreateAcct({ ...createAcct, [e.target.name]: e.target.value })
   }
 
+  const handleGoBack = () => {
+    navigate('/')
+  }
+
   return (
     <div className='login-page'>
       <div className='login-form'>
         <h2>Login</h2>
+        <AiTranslate />
         <form onSubmit={handleLoginSubmit}>
 
           {/* Username */}
@@ -115,8 +121,8 @@ function Login() {
             required
             />
           </div>
-          
           <button type='submit'>Create Account</button>
+          <button className='go-back' onClick={handleGoBack}>Go Back</button>
         </form>
       </div>
     </div>
