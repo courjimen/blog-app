@@ -66,8 +66,8 @@ app.post('/bookmarks', async (req, res) => {
 //display fave blogs
 app.get('/bookmarks/blogs', async (req, res) => {
     try {
-        const result = await pool.query('SELECT blog_id FROM bookmarks');
-        res.json(result.rows.map(row => row.blog_id));
+        const result = await pool.query('SELECT list.* FROM bookmarks JOIN list ON bookmarks.blog_id = list.blog_id');
+        res.json(result.rows);
     } catch (err) {
         console.error('Error fetching bookmarks:', err);
         res.sendStatus(500);
@@ -84,6 +84,30 @@ app.delete('/bookmarks/:blogId', async (req, res) => {
         console.error('Error removing bookmark:', err);
         res.sendStatus(500);
     }
+});
+
+//delete a blog
+app.delete('/blogs/:id', async (req, res) => {
+    const { id } = req.params;
+    const client = await pool.connect();
+    try {
+      await client.query('BEGIN');
+  
+      // Remove from bookmarks
+      await client.query('DELETE FROM bookmarks WHERE blog_id = $1', [id]);
+  
+      // Remove from list
+      await client.query('DELETE FROM list WHERE blog_id = $1', [id]);
+  
+      await client.query('COMMIT');
+      res.sendStatus(204);
+    } catch (err) {
+      await client.query('ROLLBACK');
+      console.error('Error deleting blog and removing from bookmarks:', err);
+      res.sendStatus(500);
+    } finally {
+      client.release();
+}
 });
 
 app.listen(port, () => {
