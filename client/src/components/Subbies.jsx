@@ -15,7 +15,7 @@ function Subbies() {
 
   const handleSubscribeSubmit = (e) => {
     e.preventDefault();
-    console.log('Thanks for subscribing:', subscribe)
+    alert('Thanks for subscribing!')
     navigate('/')
   }
 
@@ -50,7 +50,6 @@ function Subbies() {
             name="lastName"
             value={subscribe.lastName}
             onChange={handleSubscribeChange}
-            required
           />
         </div>
 
