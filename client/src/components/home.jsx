@@ -69,6 +69,7 @@ function Home() {
       console.error('Error adding fave:', err)
     }
   }
+  
   const deleteBlog = async (blogId) => {
     try {
       const res = await fetch(`http://localhost:3000/blogs/${blogId}`, {
@@ -76,14 +77,15 @@ function Home() {
       });
       if (res.ok) {
         // Remove the deleted blog from the local state
-        setBlogs(blogs.filter((blog) => blog.blog_id !== blogId));
+        setBlogs(blogs.filter((blog) => blog.blog_id !== blogId))
       } else {
-        console.error('Failed to delete blog');
+        console.error('Failed to delete blog')
       }
     } catch (err) {
-      console.error('Error deleting blog:', err);
+      console.error('Error deleting blog:', err)
     }
-  };
+  }
+
   return (
     <div className='home-page'>
       <h1 className='home-header'>Welcome to my Blog</h1>
