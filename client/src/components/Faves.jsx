@@ -51,7 +51,7 @@ function Faves() {
             />
           <h2>{blog.title}</h2>
           <h3>Category: {blog.category}</h3>
-          <p>{blog.content.substring(0,100)}...</p>
+          <p>{blog.content.substring(0,150)}...</p>
           <Link to={`/blogs/${blog.blog_id}`}>Read More</Link>
         </div>
       ))}
