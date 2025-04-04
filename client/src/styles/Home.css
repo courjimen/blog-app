@@ -1,1 +1,52 @@
-
+.blog-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+  }
+  
+  .blog-square {
+    border: 1px solid salmon;
+    padding: 20px;
+    margin: 0;
+    border-radius: 5px;
+    background-color: bisque;
+  }
+  
+  .blog-square h3 {
+    margin-top: 0;
+    text-align: center;
+  }
+  
+  .blog-square p {
+    margin-bottom: 15px;
+  }
+  
+  .blog-square a {
+    background-color: tan;
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+    text-decoration: none;
+    width: 100%;
+    display: block;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .blog-square a:hover {
+    background-color: salmon;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 900px) {
+    .blog-list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .blog-list {
+      grid-template-columns: 1fr;
+    }
+  }

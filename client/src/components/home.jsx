@@ -29,16 +29,18 @@ function Home() {
     <div className='home-page'>
       <h1 className='home-header'>Welcome to my Blog</h1>
       <NavBar />
+      <AiTranslate />
 
       {/* Display Blogs */}
-      <div>
-        <AiTranslate />
+      
         <h2>Blog Posts</h2>
+        <div className='blog-list'>
         {blogs.map((blog) => (
-          <div key={blog.blog_id}>
+          <div key={blog.blog_id} className='blog-square'>
             <h3>{blog.title}</h3>
             <h3>Category: {blog.category}</h3>
-            <p>{blog.content}</p>
+            <p>{blog.content.substring(0, 100)}...</p>
+            <Link to={`/blog/${blog.blog_id}`}>Read More</Link>
           </div>
         ))}
       </div>

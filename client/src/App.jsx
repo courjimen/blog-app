@@ -5,6 +5,7 @@ import Login from './components/Login';
 import Subbies from './components/Subbies';
 import Faves from './components/Faves';
 import AddBlog from './components/AddBlog';
+import Blog from './components/Blog';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/subscribe" element={<Subbies/>} />
         <Route path="/favorites" element={<Faves/>} />
         <Route path="/new" element={<AddBlog />} />
+        <Route path="/blog/:id" element={<Blog />} />
      </Routes>
     </Router>
   )
