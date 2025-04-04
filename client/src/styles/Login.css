@@ -5,8 +5,7 @@
     min-height: 100vh;
   }
   
-  .login-form,
-  .create-acct, .subbie-form, .blog {
+  .login-form, .subbie-form, .blog {
     width: 300px;
     padding: 20px;
     border: 1px solid salmon;
@@ -15,33 +14,28 @@
     margin: 20px;
   }
   
-  .login-form h2,
-  .create-acct h2, .subbie-form h2, .blog h2 {
+  .login-form h2, .subbie-form h2, .blog h2 {
     text-align: center;
   }
   
-  .login-form div,
-  .create-acct div, .subbie-form div, .blog div{
+  .login-form div, .subbie-form div, .blog div{
     margin-bottom: 10px;
   }
   
-  .login-form label,
-  .create-acct label, .subbie-form label, .blog label {
+  .login-form label, .subbie-form label, .blog label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
   }
   
-  .login-form input,
-  .create-acct input, .subbie-form input, .blog input {
+  .login-form input, .subbie-form input, .blog input {
     width: 100%;
     padding: 8px;
     border: 1px solid white;
     border-radius: 4px;
   }
   
-  .login-form button,
-  .create-acct button, .subbie-form button, .blog button, .go-back{
+  .login-form button, .subbie-form button, .blog button {
     width: 100%;
     padding: 10px;
     background-color: tan;
@@ -51,8 +45,7 @@
     cursor: pointer;
   }
   
-  .login-form button:hover, .go-back:hover,
-  .create-acct button:hover, .subbie-form button:hover, .blog button:hover {
+  .login-form button:hover, .subbie-form button:hover, .blog button:hover {
     background-color: salmon;
   }
   

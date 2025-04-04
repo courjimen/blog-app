@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 import '../styles/Login.css'
 import AiTranslate from './AiTranslate'
 
@@ -88,6 +88,8 @@ function Subbies() {
         <AiTranslate />
         <button type='submit'>Subscribe</button>
       </form>
+      <br/>
+      <Link to='/'>Go Back Home</Link>
     </div>
   )
 }
