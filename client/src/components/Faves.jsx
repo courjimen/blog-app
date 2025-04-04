@@ -23,16 +23,17 @@ function Faves() {
   }, []);
 
   return (
-    <div className="faves-page">
+    <div className="faves-page"> 
       <h1>Your Favorite Blogs</h1>
       {faveBlogs.map((blog) => (
         <div key={blog.blog_id} className="fave-blog">
-          <h3>{blog.title}</h3>
+          <h2>{blog.title}</h2>
           <h3>Category: {blog.category}</h3>
           <p>{blog.content}</p>
           <Link to={`/blogs/${blog.blog_id}`}>Read More</Link>
         </div>
       ))}
+      <Link to='/'>Go Back</Link>
     </div>
   );
 }

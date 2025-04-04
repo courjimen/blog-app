@@ -1,3 +1,11 @@
+.home-header {
+  display: flex;
+  justify-content: center;
+}
+.home-page h2 {
+  display: flex;
+  justify-content: center;
+}
 .blog-list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

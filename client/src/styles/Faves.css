@@ -1,5 +1,5 @@
 .faves-page {
-    padding: 20px;
+    padding: 20px
   }
   
   .fave-blog {
@@ -8,8 +8,11 @@
     margin-bottom: 20px;
   }
   
-  .fave-blog h3 {
+  .fave-blog h2{
+    font-style: italic;
     margin-top: 0;
+    color: salmon;
+    
   }
   
   .fave-blog p {
