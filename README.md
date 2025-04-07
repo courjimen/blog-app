@@ -40,13 +40,9 @@ Cd into client and run this command:
 ```bash
 npm install react react-router-dom @fortawesome/fontawesome-svg-core @fortawesome/free-solid-svg-icons @fortawesome/react-fontawesome
 ```
-Run this second command in client for testing:
+Run this second command in client for testing (_Run ALL tests inside client directory_):
 ```bash
-npm install --save-dev vitest @testing-library/react @testing-library/user-event @testing-library/jest-dom jsdom
-
-npm install --save-dev @babel/core @babel/preset-env @babel/preset-react
-
-npm install --save-dev jest-transform-stub
+npm install --save-dev jest @testing-library/react @testing-library/jest-dom @babel/core @babel/preset-env @babel/preset-react babel-jest jest-transform-stub
 ```
 
 Return to root directory and install jest and concurrently run these two commands:
