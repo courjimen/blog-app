@@ -1,15 +1,26 @@
 import * as React from 'react';
-import '@testing-library/react';
+import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
 import Login from '../components/Login.jsx';
+import { BrowserRouter } from 'react-router-dom';
 
 describe('Login', () => {
-    test('renders Login component', () => {
+    test('renders the "Sign In" button', () => {
         render(
-            <Login />
+            <BrowserRouter>
+                <Login />
+            </BrowserRouter>
         );
-        const form = screen.getByRole('heading', { level: 2 })
+        const signInButton = screen.getByRole('button', { name: /sign in/i });
+        expect(signInButton).toBeInTheDocument();
+    });
 
-        expect(form).toBeInTheDocument();
+    test('the "Sign In" button has the correct type', () => {
+        render(
+        <BrowserRouter>
+            <Login />
+        </BrowserRouter>);
+        const signInButton = screen.getByRole('button', { name: /sign in/i });
+        expect(signInButton).toHaveAttribute('type', 'submit');
     });
 });

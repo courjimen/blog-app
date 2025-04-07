@@ -5,7 +5,7 @@ import NavBar from '../components/NavBar.jsx';
 import { BrowserRouter } from 'react-router-dom';
 
 describe('NavBar Component', () => {
-  test('renders the logo link', () => {
+  test('renders the login link', () => {
     render(
     <BrowserRouter>
     <NavBar />
