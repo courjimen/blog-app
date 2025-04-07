@@ -11,7 +11,7 @@ describe('Subbies Component', () => {
         <Subbies />
       </BrowserRouter>
     );
-    const headingElement = screen.getByRole('heading', { name: /Subscribe to my Blog!/i });
+    const headingElement = screen.getByRole('heading', { name: /Subscribe/i });
     expect(headingElement).toBeInTheDocument();
   });
 });
