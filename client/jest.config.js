@@ -8,8 +8,7 @@ module.exports = {
     testMatch: ['<rootDir>/src/__tests__/**/*.test.jsx'],
     collectCoverageFrom: [
       'src/**/*.{js,jsx}',
-      '!src/test/**', // Exclude your test folder from coverage
-      '!src/__mocks__/**', // Exclude your mocks folder from coverage
+      '!src/test/**',
       '!src/index.js',
       '!src/reportWebVitals.js',
       '!src/serviceWorker.js',
