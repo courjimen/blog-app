@@ -40,6 +40,9 @@ Cd into client and run this command:
 ```bash
 npm install react react-router-dom @fortawesome/fontawesome-svg-core @fortawesome/free-solid-svg-icons @fortawesome/react-fontawesome
 ```
+```bash
+npm install react@latest react-dom@latest
+```
 
 Return to root directory and install jest and concurrently run these two commands:
 
