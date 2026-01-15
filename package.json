@@ -7,7 +7,8 @@
     "test": "jest",
     "client": "cd client && vite",
     "server": "nodemon server/server.js",
-    "dev": "concurrently \"npm run server\" \"npm run dev --prefix client\""
+    "client-dev": "concurrently \"npm run mock-server --prefix server\" \"npm run dev --prefix client\"",
+    "dev": "concurrently \"npm run server\" \"npm run dev\" --prefix client\""
   },
   "jest": {
     "testEnvironment": "jest-environment-jsdom"
